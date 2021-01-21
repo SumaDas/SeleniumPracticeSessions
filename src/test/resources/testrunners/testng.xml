@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test automtion regression suite" parallel="tests"
+	thread-count="3" verbose="3">
+
+	<test name="Google Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="TestNgSessions.GoogleTestWithBT">
+				<!-- <methods> 
+				<include name="googleTitleTest" /> 
+				<include name="googleLogoTest" />
+				<exclude name="googleSearchButtonTest" /> 
+					</methods> -->
+			</class>
+		</classes>
+	</test>
+
+	<test name="Flipkart Test">
+		<parameter name="browser" value="firefox" />
+
+		<classes>
+			<class name="TestNgSessions.FlipkartTest" />
+		</classes>
+	</test>
+
+	<test name="Noon Test">
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+			<class name="TestNgSessions.NoonTest" />
+		</classes>
+	</test>
+	
+</suite>
